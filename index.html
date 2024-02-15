@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saed's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Grey Pink Personal Brand Logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+           <p>Software Engineer Student</p>
+           <h1>Welcome to my digital portfolio <br> a window into my world of coding, innovation, <br> and endless possibilities!</h1>      
+    </div>
+</div> 
+</div> 
+<!-----------about---------->  
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/IMG_7996.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me...<br></h1>
+                <p class="AboutText">Hello! I’m Saed Mohamud, a dedicated and enthusiastic 20-year-old sophomore with a deep-rooted passion for computer science and software development. Hailing from the vibrant landscapes of Somalia and raised in the bustling city of Chicago, Illinois, my journey in technology has been as diverse as my background. <br><br></p>
+                <p class="AboutText">At a young age, I discovered my fascination with computers and the intricate art of problem-solving. This interest quickly blossomed into a lifelong passion, steering me towards pursuing a degree in computer science. My academic journey is not just a path to a profession; it's an adventure that I embark on every day with excitement and curiosity.<br><br></p>
+                <p class="AboutText">Through this website, I am thrilled to share with you a collection of my favorite projects. Each one is a testament to my growth and dedication in the realm of computer science. These projects range from innovative applications to complex software solutions, all crafted with the aim of pushing the boundaries of technology and creativity.<br><br></p>
+                <p class="AboutText">As you explore my site, I hope you find inspiration and insight into the world of computer science as seen through my eyes. Enjoy exploring my projects, and feel free to reach out if you have any questions or would like to discuss potential collaborations.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experiance')">Experiance</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Java</span><br>Experianced</li>
+                        <li><span>Python</span><br>Experianced</li>
+                        <li><span>HTML</span><br>Intermediate</li>
+                        <li><span>CSS</span><br>Intermediate</li>
+                        <li><span>JavaScript</span><br>Intermediate</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experiance">
+                    <ul>
+                        <li><span>2022-Current</span><br>Java Back End Programing Language</li>
+                        <li><span>2022-Current</span><br>Python Back End Programing Language</li>
+                        <li><span>2023-Current</span><br>HTML Front End</li>
+                        <li><span>2023-Current</span><br>CSS Front End</li>
+                        <li><span>2023-Current</span><br>JavaScript Front End Functionality</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018-2022</span><br> Maine East High School - High School Deploma</li>
+                        <li><span>2022-Current</span><br> Oakton College - Credit Courses</li>
+                        <li><span>2024-2026</span><br>Expected - University Of Illinois In Chicago - Bachelor's In Software Engineering
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------Portfolio ---------->  
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title"> My Work<br></h1>
+        <div class="work-list">
+            <div class="work">
+                <a href="calc.html"><img src="images/Work-1.png"></a>
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    <p> An easy day to day simple calculator<br> click on the image to start</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ComingSoon.png">
+                <h3> Next Project</h3>
+            </div>
+            <div class="work">
+                <img src="images/ComingSoon.png">
+                <h3> Next Project</h3>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<script>
+    
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+
+
+</script>
+
+</body>
+</html>
